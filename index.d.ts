@@ -13,9 +13,17 @@ export interface GenerateOptions {
   debugFilename?: string;
 }
 
+export interface FontOptions {
+  family: string;
+  weight?: string;
+  style?: string;
+}
+
 export function generate(
   text: string,
   options?: GenerateOptions,
 ): Promise<string>;
 
 export function generateSync(text: string, options?: GenerateOptions): string;
+
+export function registerFont(fontPath: string, fontOptions: FontOptions): void;
