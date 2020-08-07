@@ -22,8 +22,13 @@ export interface FontOptions {
 export function generate(
   text: string,
   options?: GenerateOptions,
+  images: string[],
 ): Promise<string>;
 
-export function generateSync(text: string, options?: GenerateOptions): string;
+export function generateSync(
+  text: string,
+  options?: GenerateOptions,
+  images: string[],
+): string;
 
 export function registerFont(fontPath: string, fontOptions: FontOptions): void;
